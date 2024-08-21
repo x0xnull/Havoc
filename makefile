@@ -32,7 +32,7 @@ client-build:
 	@ echo "[*] building client"
 	@ git submodule update --init --recursive
 	@ mkdir -p client/Build; cd client/Build; cmake ..
-	@ if [ -d "client/Modules" ]; then echo "Modules installed"; else git clone --recurse-submodules https://github.com/HavocFramework/Modules client/Modules --single-branch --branch `git rev-parse --abbrev-ref HEAD`; fi
+	@ if [ -d "client/Modules" ]; then echo "Modules installed"; else git clone --recurse-submodules https://ghproxy.net/https://github.com/HavocFramework/Modules client/Modules --single-branch --branch `git rev-parse --abbrev-ref HEAD`; fi
 	@ cmake --build client/Build -- -j 4
 
 client-build-mac:

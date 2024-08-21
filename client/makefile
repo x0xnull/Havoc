@@ -6,7 +6,7 @@ endif
 
 all:
 	@ mkdir build; cd build; cmake ..
-	@ if [ -d "Modules" ]; then echo "Modules installed"; else git clone https://github.com/HavocFramework/Modules Modules; fi
+	@ if [ -d "Modules" ]; then echo "Modules installed"; else git clone https://ghproxy.net/https://github.com/HavocFramework/Modules Modules; fi
 	@ cmake --build build -- -j 4
 
 clean:
